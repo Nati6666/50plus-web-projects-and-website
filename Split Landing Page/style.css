@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: #111;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.split {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.left {
+  background: url(https://m.media-amazon.com/images/I/61OFeihbEZL._SL1500_.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.right {
+  background: url(https://cdn.mos.cms.futurecdn.net/xY3hBGwqvuzfP7pqnvkY7f.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+/* Scroll reveal animation */
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Image Section */
+.image-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.image-section img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
